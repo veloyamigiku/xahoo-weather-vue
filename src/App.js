@@ -1,10 +1,11 @@
 import './App.css';
 import logo from "./components/weather/logo.png";
 import Header from './components/common/Header';
+import FooterWrap from './components/common/FooterWrap';
 
 
 function App() {
-
+  
   return (
     <div id="wrapper">
       <div id="header">
@@ -14,7 +15,9 @@ function App() {
         <div id="menu"></div>
         <div id="contents"></div>
       </div>
-      <div id="footer"></div>
+      <div id="footer">
+        <FooterWrap />
+      </div>
     </div>
   );
 }

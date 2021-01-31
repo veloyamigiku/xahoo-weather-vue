@@ -1,0 +1,17 @@
+#footerLink {
+    text-align: center;
+}
+
+#footerLink a {
+    font-size: small;
+    text-decoration: none;
+}
+
+#copyright {
+    text-align: center;
+}
+
+#copyright div {
+    font-size: small;
+    color: #333
+}
