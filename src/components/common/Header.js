@@ -1,8 +1,8 @@
-function Header(props) {
+let Header = function(props) {
 
     return (
         <div>
-            <img id="headerLogo" src={props.logo} alt={props.headerLogoAlt} />
+            <img id="logo" src={props.logo} alt={props.logoAlt} />
         </div>
     )
 

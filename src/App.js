@@ -1,7 +1,6 @@
 import './App.css';
-import logo from "./components/weather/logo.png";
-import Header from './components/common/Header';
 import FooterWrap from './components/common/FooterWrap';
+import HeaderWrap from './components/common/HeaderWrap';
 
 
 function App() {
@@ -9,7 +8,7 @@ function App() {
   return (
     <div id="wrapper">
       <div id="header">
-        <Header logo={logo} headerLogoAlt="XahoojapanWeather" />
+        <HeaderWrap />
       </div>
       <div id="main">
         <div id="menu"></div>

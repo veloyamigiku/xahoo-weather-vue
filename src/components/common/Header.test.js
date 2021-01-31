@@ -10,14 +10,14 @@ Enzyme.configure({
 
 describe('Headerコンポーネント', () => {
 
-    let alt = "XahoojapanWeather";
+    let logoAlt = "XahoojapanWeather";
 
     it('プロップスのテスト', () => {
-        const wrapper = shallow(<Header logo={logo} headerLogoAlt={alt} />);
-        let img = wrapper.find('#headerLogo');
+        const wrapper = shallow(<Header logo={logo} logoAlt={logoAlt} />);
+        let img = wrapper.find('#logo');
         expect(img.length).toBe(1);
         expect(img.prop('src')).toBe(logo)
-        expect(img.prop('alt')).toBe(alt);
+        expect(img.prop('alt')).toBe(logoAlt);
     });
 
 });
