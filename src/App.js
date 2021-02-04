@@ -15,6 +15,8 @@ function App() {
         <div id="contents"></div>
         <div id="menu">
           <SideMenuWrap type="disaster" />
+          <SideMenuWrap type="weather" />
+          <SideMenuWrap type="leisure" />
         </div>
       </div>
       <div id="footer">
