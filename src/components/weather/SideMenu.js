@@ -5,6 +5,7 @@ let SideMenu = function(props) {
 
     let id = props.id;
     let title = props.title;
+    let titleBgcolor = props.titleBgcolor;
     let items = props.items;
     let rowItemCount = 2;
 
@@ -27,7 +28,7 @@ let SideMenu = function(props) {
 
     return (
         <div id={id}>
-            <SideMenuTitle text={title} />
+            <SideMenuTitle text={title} bgcolor={titleBgcolor} />
             {rowNodes}
         </div>
     );

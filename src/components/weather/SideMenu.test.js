@@ -13,6 +13,7 @@ describe('SideMenuコンポーネント', () => {
     it('プロップスのテスト', () => {
         let id = "disasterSideMenu";
         let title = "防災情報";
+        let titleBgcolor = "#eee7e0";
         let items = [
             {
                 'text': '警報・注意報',
@@ -32,7 +33,7 @@ describe('SideMenuコンポーネント', () => {
             }
         ];
 
-        let wrapper = shallow(<SideMenu id={id} title={title} items={items} />);
+        let wrapper = shallow(<SideMenu id={id} title={title} titleBgcolor={titleBgcolor} items={items} />);
 
         let sideMenuNode = wrapper.find('div#' + id);
         expect(sideMenuNode).toHaveLength(1);

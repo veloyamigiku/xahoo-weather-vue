@@ -4,10 +4,12 @@ let SideMenuWrap = function(props) {
 
     var items = [];
     var title = "";
+    var titleBgcolor = "";
     let id = props.type + "SideMenu";
     switch (props.type) {
         case "disaster":
             title = "防災情報";
+            titleBgcolor = "#eee7e0";
             items = [
                 {
                     'text': '警報・注意報',
@@ -29,6 +31,7 @@ let SideMenuWrap = function(props) {
             break;
         case "weather":
             title = "天気ガイド";
+            titleBgcolor = "#eee7e0";
             items = [
                 {
                     'text': '天気予報',
@@ -50,6 +53,7 @@ let SideMenuWrap = function(props) {
             break;
         case "leisure":
             title = "レジャー施設";
+            titleBgcolor = "#eee7e0";
             items = [
                 {
                     'text': '空港',
@@ -71,6 +75,7 @@ let SideMenuWrap = function(props) {
             break;
         default:
             title = "防災情報";
+            titleBgcolor = "#eee7e0";
             items = [
                 {
                     'text': '警報・注意報',
@@ -93,7 +98,7 @@ let SideMenuWrap = function(props) {
     }
     
     return (
-        <SideMenu id={id} title={title} items={items} />
+        <SideMenu id={id} title={title} titleBgcolor={titleBgcolor} items={items} />
     );
 
 }
