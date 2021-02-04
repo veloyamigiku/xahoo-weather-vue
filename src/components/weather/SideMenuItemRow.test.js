@@ -9,7 +9,7 @@ Enzyme.configure({
 
 describe("SideMenuItemRowコンポーネント", () => {
 
-    it("プロップスのテスト", () => {
+    it("プロップスのテスト1", () => {
 
         let items = [
             {
@@ -21,11 +21,29 @@ describe("SideMenuItemRowコンポーネント", () => {
                 'url': 'http://localhost:3000'
             }
         ];
+        let maxItemCount = 2;
         
-        let wrapper = shallow(<SideMenuItemRow items={items} />);
+        let wrapper = shallow(<SideMenuItemRow items={items} maxItemCount={maxItemCount} />);
 
         let sideMenuItemNodes = wrapper.find(SideMenuItem);
-        expect(sideMenuItemNodes).toHaveLength(items.length);
+        expect(sideMenuItemNodes).toHaveLength(maxItemCount);
+        
+    });
+
+    it("プロップスのテスト2", () => {
+
+        let items = [
+            {
+                'text': '警報・注意報',
+                'url': 'http://localhost:3000'
+            }
+        ];
+        let maxItemCount = 2;
+        
+        let wrapper = shallow(<SideMenuItemRow items={items} maxItemCount={maxItemCount} />);
+
+        let sideMenuItemNodes = wrapper.find(SideMenuItem);
+        expect(sideMenuItemNodes).toHaveLength(maxItemCount);
         
     });
 

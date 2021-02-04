@@ -1,0 +1,19 @@
+.SideMenuItem {
+    display: table-cell;
+    padding: 10px;
+    font-size: .875rem;
+}
+
+.SideMenuItem:first-of-type {
+    border-top: 1px solid #e3e3e3;
+    border-right: 1px solid #e3e3e3;
+}
+
+.SideMenuItem:last-of-type {
+    border-top: 1px solid #e3e3e3;
+}
+
+.SideMenuItem a {
+    display: block;
+    text-decoration: none;
+}

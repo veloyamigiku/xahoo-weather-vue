@@ -1,19 +1,24 @@
 import SideMenuItemRow from "./SideMenuItemRow";
 import SideMenuTitle from "./SideMenuTitle";
+import classes from './SideMenu.module.css';
 
 let SideMenu = function(props) {
 
     let id = props.id;
     let title = props.title;
-    let titleBgcolor = props.titleBgcolor;
+    let typeColor = props.typeColor;
+    let typeBorderColor = props.typeBorderColor;
     let items = props.items;
-    let rowItemCount = 2;
+    let maxItemCount = 2;
+    let style = {
+        borderTopColor: typeBorderColor
+    }
 
     var rowsItemsAry = [];
     var rowItems = [];
     items.forEach(function(item, _) {
         rowItems.push(item);
-        if (rowItems.length === rowItemCount) {
+        if (rowItems.length === maxItemCount) {
             rowsItemsAry.push(rowItems);
             rowItems = [];
         }
@@ -23,12 +28,12 @@ let SideMenu = function(props) {
     }
     var rowNodes = [];
     rowsItemsAry.forEach(function(rowItems, idx) {
-        rowNodes.push(<SideMenuItemRow key={idx} items={rowItems} />);
+        rowNodes.push(<SideMenuItemRow key={idx} items={rowItems} maxItemCount={maxItemCount} />);
     });
 
     return (
-        <div id={id}>
-            <SideMenuTitle text={title} bgcolor={titleBgcolor} />
+        <div id={id} className={classes.SideMenu} style={style}>
+            <SideMenuTitle text={title} typeColor={typeColor} />
             {rowNodes}
         </div>
     );

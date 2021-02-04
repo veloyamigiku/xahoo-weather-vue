@@ -5,7 +5,7 @@ let SideMenuTitle = function(props) {
     let text = props.text;
     
     let style = {
-        backgroundColor: props.bgcolor
+        backgroundColor: props.typeColor
     };
 
     return (
