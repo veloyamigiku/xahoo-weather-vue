@@ -1,6 +1,7 @@
 import './App.css';
 import FooterWrap from './components/common/FooterWrap';
 import HeaderWrap from './components/common/HeaderWrap';
+import SideMenuWrap from './components/weather/SideMenuWrap';
 
 
 function App() {
@@ -11,8 +12,10 @@ function App() {
         <HeaderWrap />
       </div>
       <div id="main">
-        <div id="menu"></div>
         <div id="contents"></div>
+        <div id="menu">
+          <SideMenuWrap type="disaster" />
+        </div>
       </div>
       <div id="footer">
         <FooterWrap />
