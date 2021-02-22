@@ -1,0 +1,22 @@
+.weather_title {
+    display: flex;
+    color: #333;
+    padding: .3em .6em;
+    background-color: #e5eaf7;
+    border-top: solid 1px #bbc7e3;
+}
+
+.weather_title_subject {
+    font-weight: 700;
+}
+
+.weather_title_date {
+    margin-left: auto;
+    font-weight: 400;
+    font-size: 84%;
+}
+
+.weather_title_time {
+    font-weight: 400;
+    font-size: 84%;
+}
