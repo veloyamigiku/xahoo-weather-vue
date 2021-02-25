@@ -1,0 +1,38 @@
+.WeatherT {
+    display: flex;
+    align-items: center;
+}
+
+.WeatherType img {
+    height: 50px;
+}
+
+.WeatherStr {
+    font-size: 1.025rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.HighT {
+    padding-left: 10px;
+    color: #f13102;
+    font-size: 0.9rem;
+}
+
+.HighT em {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.LowT {
+    padding-left: 10px;
+    color: #0a38e4;
+    font-size: 0.9rem;
+}
+
+.LowT em {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 700;
+}

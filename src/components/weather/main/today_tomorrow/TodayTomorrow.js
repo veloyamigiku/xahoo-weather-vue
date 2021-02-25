@@ -1,9 +1,15 @@
 import WeatherTitle from '../common/WeatherTitle';
+import TodayTomorrowTitle from './TodayTomorrowTitle';
+import WeatherT from './WeatherT';
 
 const TodayTomorrow = function(props) {
 
     return (
-        <WeatherTitle subject={props.subject} date={props.date} time={props.time} />
+        <div>
+            <WeatherTitle data={props.data.titleData} />
+            <TodayTomorrowTitle data={props.data.todayData.titleData} />
+            <WeatherT data={props.data.todayData.weatherTData} />
+        </div>
     )
 }
 
