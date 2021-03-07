@@ -27,7 +27,29 @@ const WeatherRegionWrap = function() {
                 highTDiff: "-8",
                 lowT: "4",
                 lowTDiff: "-1"
-            }
+            },
+            rainData: [
+                {
+                    startHour: 0,
+                    endHour: 6,
+                    rain: 10
+                },
+                {
+                    startHour: 6,
+                    endHour: 12,
+                    rain: 12
+                },
+                {
+                    startHour: 12,
+                    endHour: 18,
+                    rain: 14
+                },
+                {
+                    startHour: 18,
+                    endHour: 24,
+                    rain: 30
+                }
+            ]
         }
     };
     return (

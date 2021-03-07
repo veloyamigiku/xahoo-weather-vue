@@ -5,6 +5,7 @@ import TodayTomorrowTitle from './TodayTomorrowTitle';
 import sunny from './sunny.png';
 import WeatherT from './WeatherT';
 import WeatherTitle from '../common/WeatherTitle';
+import RainTable from './RainTable';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -28,7 +29,29 @@ describe('TodayTomorrowコンポーネント', () => {
                 highTDiff: "-8",
                 lowT: "4",
                 lowTDiff: "-1"
-            }
+            },
+            rainData: [
+                {
+                    startHour: 0,
+                    endHour: 6,
+                    rain: 10
+                },
+                {
+                    startHour: 6,
+                    endHour: 12,
+                    rain: 12
+                },
+                {
+                    startHour: 12,
+                    endHour: 18,
+                    rain: 14
+                },
+                {
+                    startHour: 18,
+                    endHour: 24,
+                    rain: 30
+                }
+            ]
         }
     };
     it('プロップスのテスト', () => {
@@ -46,5 +69,9 @@ describe('TodayTomorrowコンポーネント', () => {
         expect(weatherTNode).toHaveLength(1);
         expect(weatherTNode.at(0).prop('data')).toEqual(todayTomorrowData.todayData.weatherTData);
 
+        const rainTableNode = wrapper.find(RainTable);
+        expect(rainTableNode).toHaveLength(1);
+        expect(rainTableNode.prop('data')).toEqual(todayTomorrowData.todayData.rainData);
+        
     });
 });

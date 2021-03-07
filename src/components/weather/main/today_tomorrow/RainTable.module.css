@@ -1,0 +1,21 @@
+.RainTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+.RainTable th {
+    color: #333;
+    border: 1px solid;
+    font-weight: normal;
+    font-size: 0.75rem;
+    background-color: #f2f4fa;
+    width: 20%;
+    text-align: center;
+}
+
+.RainTable td {
+    color: #333;
+    border: 1px solid;
+    font-size: 0.75rem;
+    width: 20%;
+    text-align: center;
+}
