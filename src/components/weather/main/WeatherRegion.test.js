@@ -49,6 +49,16 @@ describe('WeatherRegionコンポーネント', () => {
                     endHour: 24,
                     rain: 30
                 }
+            ],
+            optionData: [
+                {
+                  name: '風',
+                  value: '北の風強く後北東の風'
+                },
+                {
+                  name: '波',
+                  value: '4メートル後3メートルうねりを伴う'
+                }
             ]
         }
     };

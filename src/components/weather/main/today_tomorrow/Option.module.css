@@ -1,0 +1,25 @@
+.Option {
+    margin-top: 5px;
+}
+
+.OptionItem {
+    display: flex;
+    margin-top: 5px;
+}
+
+.OptionItemName {
+    font-size: .75rem;
+    color: #333;
+}
+
+.OptionItemDivider {
+    font-size: .75rem;
+    color: #333;
+    margin-left: 5px;
+}
+
+.OptionItemValue {
+    font-size: .75rem;
+    color: #333;
+    margin-left: 5px;
+}

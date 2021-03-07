@@ -6,6 +6,7 @@ import sunny from './sunny.png';
 import WeatherT from './WeatherT';
 import WeatherTitle from '../common/WeatherTitle';
 import RainTable from './RainTable';
+import Option from './Option';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -51,6 +52,16 @@ describe('TodayTomorrowコンポーネント', () => {
                     endHour: 24,
                     rain: 30
                 }
+            ],
+            optionData: [
+                {
+                  name: '風',
+                  value: '北の風強く後北東の風'
+                },
+                {
+                  name: '波',
+                  value: '4メートル後3メートルうねりを伴う'
+                }
             ]
         }
     };
@@ -72,6 +83,10 @@ describe('TodayTomorrowコンポーネント', () => {
         const rainTableNode = wrapper.find(RainTable);
         expect(rainTableNode).toHaveLength(1);
         expect(rainTableNode.prop('data')).toEqual(todayTomorrowData.todayData.rainData);
+
+        const optionNode = wrapper.find(Option);
+        expect(optionNode).toHaveLength(1);
+        expect(optionNode.at(0).prop('data')).toEqual(todayTomorrowData.todayData.optionData);
         
     });
 });
