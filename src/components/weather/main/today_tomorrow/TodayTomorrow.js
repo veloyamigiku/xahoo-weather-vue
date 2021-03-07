@@ -2,6 +2,7 @@ import WeatherTitle from '../common/WeatherTitle';
 import Option from './Option';
 import RainTable from './RainTable';
 import TodayTomorrowTitle from './TodayTomorrowTitle';
+import Warning from './Warning';
 import WeatherT from './WeatherT';
 
 const TodayTomorrow = function(props) {
@@ -13,6 +14,7 @@ const TodayTomorrow = function(props) {
             <WeatherT data={props.data.todayData.weatherTData} />
             <RainTable data={props.data.todayData.rainData} />
             <Option data={props.data.todayData.optionData} />
+            <Warning data={props.data.warningData} />
         </div>
     )
 }

@@ -60,6 +60,18 @@ describe('WeatherRegionコンポーネント', () => {
                   value: '4メートル後3メートルうねりを伴う'
                 }
             ]
+        },
+        warningData: {
+            title: '福岡地方の警報・注意報',
+            item: [
+                {
+                    type: '注意報',
+                    body: [
+                        '乾燥',
+                        '霜'
+                    ]
+                }
+            ]
         }
     };
     it('プロップスのテスト', () => {

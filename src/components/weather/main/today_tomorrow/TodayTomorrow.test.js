@@ -7,6 +7,7 @@ import WeatherT from './WeatherT';
 import WeatherTitle from '../common/WeatherTitle';
 import RainTable from './RainTable';
 import Option from './Option';
+import Warning from './Warning';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -63,6 +64,18 @@ describe('TodayTomorrowコンポーネント', () => {
                   value: '4メートル後3メートルうねりを伴う'
                 }
             ]
+        },
+        warningData: {
+            title: '福岡地方の警報・注意報',
+            item: [
+                {
+                    type: '注意報',
+                    body: [
+                        '乾燥',
+                        '霜'
+                    ]
+                }
+            ]
         }
     };
     it('プロップスのテスト', () => {
@@ -87,6 +100,10 @@ describe('TodayTomorrowコンポーネント', () => {
         const optionNode = wrapper.find(Option);
         expect(optionNode).toHaveLength(1);
         expect(optionNode.at(0).prop('data')).toEqual(todayTomorrowData.todayData.optionData);
+        
+        const warningNode = wrapper.find(Warning);
+        expect(warningNode).toHaveLength(1);
+        expect(warningNode.at(0).prop('data')).toEqual(todayTomorrowData.warningData);
         
     });
 });
