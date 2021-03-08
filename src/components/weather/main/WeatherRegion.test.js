@@ -4,6 +4,9 @@ import WeatherRegion from './WeatherRegion';
 import TodayTomorrow from './today_tomorrow/TodayTomorrow';
 import sunny from './today_tomorrow/img/sunny.png';
 import cloudy from './today_tomorrow/img/cloudy.png';
+import Pollen from './pollen/Pollen';
+import level2 from './pollen/img/level2.png';
+import level3 from './pollen/img/level3.png';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -119,10 +122,38 @@ describe('WeatherRegionコンポーネント', () => {
             ]
         }
     };
+    const pollenData = {
+        titleData: {
+            subject: '福岡県の花粉情報',
+            date: '2021年3月4日',
+            time: '18時00分発表'
+        },
+        bodyData: {
+            todayTomorrowData: [
+                {
+                    date: '3/5(金)',
+                    quantityImg: level2,
+                    quantity: 'やや多い'
+                },
+                {
+                    date: '3/6(土)',
+                    quantityImg: level3,
+                    quantity: '多い'
+                }
+            ],
+            descData: {
+                title: '花粉の詳しい情報を確認',
+                url: 'http://localhost:8080'
+            }
+        }
+    };
     it('プロップスのテスト', () => {
-        const wrapper = shallow(<WeatherRegion todayTomorrowData={todayTomorrowData} />);
+        const wrapper = shallow(<WeatherRegion todayTomorrowData={todayTomorrowData} pollenData={pollenData} />);
         const todayTomorrowNode = wrapper.find(TodayTomorrow);
         expect(todayTomorrowNode).toHaveLength(1);
         expect(todayTomorrowNode.prop('data')).toEqual(todayTomorrowData);
+        const pollenNode = wrapper.find(Pollen);
+        expect(pollenNode).toHaveLength(1);
+        expect(pollenNode.at(0).prop('data')).toEqual(pollenData);
     });
 });

@@ -1,7 +1,7 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import WeatherT from './WeatherT';
-import sunny from './sunny.png';
+import sunny from './img/sunny.png';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
