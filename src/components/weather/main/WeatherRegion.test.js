@@ -2,8 +2,8 @@ import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import WeatherRegion from './WeatherRegion';
 import TodayTomorrow from './today_tomorrow/TodayTomorrow';
-import WeatherTitle from './common/WeatherTitle';
-import sunny from './today_tomorrow/sunny.png';
+import sunny from './today_tomorrow/img/sunny.png';
+import cloudy from './today_tomorrow/img/cloudy.png';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -52,12 +52,57 @@ describe('WeatherRegionコンポーネント', () => {
             ],
             optionData: [
                 {
-                  name: '風',
-                  value: '北の風強く後北東の風'
+                    name: '風',
+                    value: '北の風強く後北東の風'
                 },
                 {
-                  name: '波',
-                  value: '4メートル後3メートルうねりを伴う'
+                    name: '波',
+                    value: '4メートル後3メートルうねりを伴う'
+                }
+            ]
+        },
+        tomorrowData: {
+            titleData: {
+                date: '2月24日(水)'
+            },
+            weatherTData: {
+                type: cloudy,
+                str: '曇り',
+                highT: '12',
+                highTDiff: '-10',
+                lowT: '2',
+                lowTDiff: '-3'
+            },
+            rainData: [
+                {
+                    startHour: 0,
+                    endHour: 6,
+                    rain: 30
+                },
+                {
+                    startHour: 6,
+                    endHour: 12,
+                    rain: 32
+                },
+                {
+                    startHour: 12,
+                    endHour: 18,
+                    rain: 34
+                },
+                {
+                    startHour: 18,
+                    endHour: 24,
+                    rain: 40
+                }
+            ],
+            optionData: [
+                {
+                    name: '風',
+                    value: '南の風強く後南東の風'
+                },
+                {
+                    name: '波',
+                    value: '5メートル後4メートルうねりを伴う'
                 }
             ]
         },

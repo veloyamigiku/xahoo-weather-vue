@@ -1,0 +1,17 @@
+.TodayTomorrow {
+    display: flex;
+}
+
+.Today {
+    margin-top: 5px;
+    padding: 6px 10px;
+    width: 50%;
+    border: 1px solid #c5cee8;
+}
+
+.Tomorrow {
+    margin-top: 5px;
+    padding: 6px 10px;
+    width: 50%;
+    border: 1px solid #c5cee8;
+}
