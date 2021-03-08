@@ -12,8 +12,12 @@ const RainTable = function(props) {
     });
     return (
         <table className={classes.RainTable}>
-            <tr>{thList}</tr>
-            <tr>{tdList}</tr>
+            <thead>
+                <tr>{thList}</tr>
+            </thead>
+            <tbody>
+                <tr>{tdList}</tr>
+            </tbody>
         </table>
     );
 }
