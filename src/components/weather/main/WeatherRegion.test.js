@@ -4,9 +4,11 @@ import WeatherRegion from './WeatherRegion';
 import TodayTomorrow from './today_tomorrow/TodayTomorrow';
 import sunny from './common/img/sunny.png';
 import cloudy from './common/img/cloudy.png';
+import cloudy_rain from './common/img/cloudy_rain.png';
 import Pollen from './pollen/Pollen';
 import level2 from './pollen/img/level2.png';
 import level3 from './pollen/img/level3.png';
+import Week from './week/Week';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -147,13 +149,79 @@ describe('WeatherRegionコンポーネント', () => {
             }
         }
     };
+    const weekData = {
+        titleData: {
+            subject: '週間天気',
+            date: '2021年03月05日',
+            time: '4時00分発表'
+        },
+        bodyData: [
+            {
+                date: '3月7日',
+                day: '日',
+                weatherImg: cloudy,
+                weather: '曇り',
+                highT: '11',
+                lowT: '6',
+                rain: '20'
+            },
+            {
+                date: '3月8日',
+                day: '月',
+                weatherImg: cloudy,
+                weather: '曇り',
+                highT: '10',
+                lowT: '3',
+                rain: '40'
+            },
+            {
+                date: '3月9日',
+                day: '火',
+                weatherImg: sunny,
+                weather: '晴れ',
+                highT: '12',
+                lowT: '5',
+                rain: '15'
+            },
+            {
+                date: '3月10日',
+                day: '水',
+                weatherImg: cloudy,
+                weather: '曇り',
+                highT: '14',
+                lowT: '4',
+                rain: '40'
+            },
+            {
+                date: '3月11日',
+                day: '木',
+                weatherImg: sunny,
+                weather: '晴れ',
+                highT: '17',
+                lowT: '3',
+                rain: '10'
+            },
+            {
+                date: '3月12日',
+                day: '金',
+                weatherImg: cloudy_rain,
+                weather: '曇一時雨',
+                highT: '15',
+                lowT: '6',
+                rain: '60'
+            }
+        ]
+    };
     it('プロップスのテスト', () => {
-        const wrapper = shallow(<WeatherRegion todayTomorrowData={todayTomorrowData} pollenData={pollenData} />);
+        const wrapper = shallow(<WeatherRegion todayTomorrowData={todayTomorrowData} pollenData={pollenData} weekData={weekData} />);
         const todayTomorrowNode = wrapper.find(TodayTomorrow);
         expect(todayTomorrowNode).toHaveLength(1);
         expect(todayTomorrowNode.prop('data')).toEqual(todayTomorrowData);
         const pollenNode = wrapper.find(Pollen);
         expect(pollenNode).toHaveLength(1);
         expect(pollenNode.at(0).prop('data')).toEqual(pollenData);
+        const weekNode = wrapper.find(Week);
+        expect(weekNode).toHaveLength(1);
+        expect(weekNode.at(0).prop('data')).toEqual(weekData);
     });
 });
