@@ -19,7 +19,7 @@ const Warning = function(props) {
     });
     return (
         <div className={classes.Warning}>
-            <div className={classes.WarningTitle}><a href="#">{props.data.title}</a></div>
+            <div className={classes.WarningTitle}><a href="http://localhost:3000">{props.data.title}</a></div>
             {warnItemList}
         </div>
     );
