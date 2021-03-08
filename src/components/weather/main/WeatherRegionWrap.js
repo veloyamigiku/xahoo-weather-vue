@@ -1,6 +1,6 @@
 import WeatherRegion from "./WeatherRegion";
-import sunny from './today_tomorrow/img/sunny.png';
-import cloudy from './today_tomorrow/img/cloudy.png';
+import sunny from './common/img/sunny.png';
+import cloudy from './common/img/cloudy.png';
 import level2 from './pollen/img/level2.png';
 import level3 from './pollen/img/level3.png';
 
