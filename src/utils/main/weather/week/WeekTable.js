@@ -6,7 +6,8 @@ export function formatWeekBody(bodyData) {
     for (var i = 0; i < bodyData.length; i++) {
         const oneDay = bodyData[i]
         dateList.push({
-            date: oneDay.date,
+            year: oneDay.year,
+            month: oneDay.month,
             day: oneDay.day
         })
         weatherList.push({
@@ -25,4 +26,13 @@ export function formatWeekBody(bodyData) {
         tList,
         rainList
     ];
+}
+
+export function getDayOfWeekStr(year, month, day) {
+    return ['日', '月', '火', '水', '木', '金', '土'][getDayOfWeek(year, month, day)];
+}
+
+export function getDayOfWeek(year, month, day) {
+    let date = new Date(year, month - 1, day);
+    return date.getDay();
 }

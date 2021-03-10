@@ -1,0 +1,72 @@
+.WeekBody {
+    margin-top: 5px;
+}
+
+.WeekRow {
+    display: flex;
+    align-items: center;
+    border-left: solid 1px #c4cde8;
+    border-right: solid 1px #c4cde8;
+}
+
+.WeekRow:first-of-type .WeekCol:nth-of-type(n + 2) {
+    background-color: #e8edfc;
+}
+
+.WeekRow:nth-of-type(n + 1) {
+    border-top: solid 1px #c4cde8;
+}
+
+.WeekRow:last-of-type {
+    border-bottom: solid 1px #c4cde8;
+}
+
+.WeekCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50px;
+    font-size: 13.5px;
+    color: #333;
+}
+
+.WeekCol:first-of-type {
+    background-color: #ededed;
+    width: 10%;
+}
+
+.WeekCol:nth-of-type(n + 2) {
+    border-left: solid 1px #c4cde8;
+    width: 15%;
+}
+
+.WeekDayCol em {
+    font-style: normal;
+    color: #333;
+}
+
+.WeekDaySatCol em {
+    font-style: normal;
+    color: #0a38e4;
+}
+
+.WeekDaySunCol em {
+    font-style: normal;
+    color: red;
+}
+
+.WeekWeatherImgCol img {
+    height: 25px;
+}
+
+.WeekHighTCol {
+    color: #ff3300;
+}
+
+.WeekLowTCol {
+    margin-top: 2px;
+    color: #0066ff;
+}

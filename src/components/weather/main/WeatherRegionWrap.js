@@ -1,4 +1,4 @@
-import WeatherRegion from "./WeatherRegion";
+import WeatherRegion from './WeatherRegion';
 import sunny from './common/img/sunny.png';
 import cloudy from './common/img/cloudy.png';
 import cloudy_rain from './common/img/cloudy_rain.png';
@@ -156,8 +156,9 @@ const WeatherRegionWrap = function () {
         },
         bodyData: [
             {
-                date: '3月7日',
-                day: '日',
+                year: 2021,
+                month: 3,
+                day: 7,
                 weatherImg: cloudy,
                 weather: '曇り',
                 highT: '11',
@@ -165,8 +166,9 @@ const WeatherRegionWrap = function () {
                 rain: '20'
             },
             {
-                date: '3月8日',
-                day: '月',
+                year: 2021,
+                month: 3,
+                day: 8,
                 weatherImg: cloudy,
                 weather: '曇り',
                 highT: '10',
@@ -174,8 +176,9 @@ const WeatherRegionWrap = function () {
                 rain: '40'
             },
             {
-                date: '3月9日',
-                day: '火',
+                year: 2021,
+                month: 3,
+                day: 9,
                 weatherImg: sunny,
                 weather: '晴れ',
                 highT: '12',
@@ -183,8 +186,9 @@ const WeatherRegionWrap = function () {
                 rain: '15'
             },
             {
-                date: '3月10日',
-                day: '水',
+                year: 2021,
+                month: 3,
+                day: 10,
                 weatherImg: cloudy,
                 weather: '曇り',
                 highT: '14',
@@ -192,8 +196,9 @@ const WeatherRegionWrap = function () {
                 rain: '40'
             },
             {
-                date: '3月11日',
-                day: '木',
+                year: 2021,
+                month: 3,
+                day: 11,
                 weatherImg: sunny,
                 weather: '晴れ',
                 highT: '17',
@@ -201,8 +206,9 @@ const WeatherRegionWrap = function () {
                 rain: '10'
             },
             {
-                date: '3月12日',
-                day: '金',
+                year: 2021,
+                month: 3,
+                day: 12,
                 weatherImg: cloudy_rain,
                 weather: '曇一時雨',
                 highT: '15',
