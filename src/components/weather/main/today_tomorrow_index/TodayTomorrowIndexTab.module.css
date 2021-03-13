@@ -1,0 +1,48 @@
+.TodayTomorrowIndexTabRoot {
+    display: flex;
+}
+
+.TodayTomorrowIndexTab {
+    width: 50%;
+    text-align: center;
+    font-size: .9rem;
+    color: #333;
+    background-color: #eee;
+    border-top: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.TodayTomorrowIndexTab em {
+    font-style: normal;
+}
+
+.TodayTomorrowIndexTabSelected {
+    width: 50%;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #333;
+    background-color: #fff;
+    border-top: solid 5px #0a38e4;
+    border-left: solid 1px #ccc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.TodayTomorrowIndexTabSelected em {
+    font-style: normal;
+}
+
+em.TodayTomorrowIndexTabSat {
+    color: #0a38e4;
+}
+
+em.TodayTomorrowIndexTabSun {
+    color: #c1132e;
+}
+
+.TodayTomorrowIndexTab:nth-of-type(n + 2) {
+    border-right: solid 1px #ccc;
+}
