@@ -1,0 +1,36 @@
+.TodayTomorrowIndexRow {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px #ccc;
+    height: 60px;
+}
+
+.TodayTomorrowIndexName {
+    width: 17%;
+    color: #333;
+    font-size: .875rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.TodayTomorrowIndexLevel {
+    width: 30%;
+    border-left: solid 1px #ccc;
+    text-align: center;
+}
+
+.TodayTomorrowIndexLevel img {
+    height: 30px;
+}
+
+.TodayTomorrowIndexLevel img:nth-of-type(n + 2) {
+    margin-left: 5px;
+}
+
+.TodayTomorrowIndexDesc {
+    width: 53%;
+    color: #444;
+    font-size: .8rem;
+    background-color: #ecf3f6;
+    padding: 10px;
+}
