@@ -16,8 +16,12 @@ describe('Weekコンポーネント', () => {
     const data = {
         titleData: {
             subject: '週間天気',
-            date: '2021年03月05日',
-            time: '4時00分発表'
+            year: 2021,
+            month: 3,
+            day: 5,
+            hour: 4,
+            min: 0,
+            postfix: '発表'
         },
         bodyData: [
             {

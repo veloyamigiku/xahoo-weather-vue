@@ -31,8 +31,12 @@ describe('TodayTomorrowIndexコンポーネント', () => {
     const data = {
         titleData: {
             subject: '今日明日の指数情報',
-            date: '2021年3月11日',
-            time: '6時00分発表'
+            year: 2021,
+            month: 3,
+            day: 11,
+            hour: 6,
+            min: 0,
+            postfix: '発表'
         },
         bodyData: [
             {

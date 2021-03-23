@@ -35,8 +35,12 @@ const WeatherRegionWrap = function () {
     const todayTomorrowData = {
         titleData: {
             subject: "今日明日の天気",
-            date: "2021年2月22日",
-            time: "6時00分発表"
+            year: 2021,
+            month: 2,
+            day: 22,
+            hour: 6,
+            min: 0,
+            postfix: '発表'
         },
         todayData: {
             titleData: {
@@ -144,8 +148,12 @@ const WeatherRegionWrap = function () {
     const pollenData = {
         titleData: {
             subject: '福岡県の花粉情報',
-            date: '2021年3月4日',
-            time: '18時00分発表'
+            year: 2021,
+            month: 3,
+            day: 4,
+            hour: 18,
+            min: 0,
+            postfix: '発表'
         },
         bodyData: {
             todayTomorrowData: [
@@ -169,8 +177,12 @@ const WeatherRegionWrap = function () {
     const weekData = {
         titleData: {
             subject: '週間天気',
-            date: '2021年03月05日',
-            time: '4時00分発表'
+            year: 2021,
+            month: 3,
+            day: 5,
+            hour: 4,
+            min: 0,
+            postfix: '発表'
         },
         bodyData: [
             {
@@ -238,8 +250,12 @@ const WeatherRegionWrap = function () {
     const todayTomorrowIndexData = {
         titleData: {
             subject: '今日明日の指数情報',
-            date: '2021年3月11日',
-            time: '6時00分発表'
+            year: 2021,
+            month: 3,
+            day: 11,
+            hour: 6,
+            min: 0,
+            postfix: '発表'
         },
         bodyData: [
             {

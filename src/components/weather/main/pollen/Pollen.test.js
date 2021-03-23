@@ -16,8 +16,12 @@ describe('Pollenコンポーネント', () => {
         const pollenData = {
             titleData: {
                 subject: '福岡県の花粉情報',
-                date: '2021年3月4日',
-                time: '18時00分発表'
+                year: 2021,
+                month: 3,
+                day: 4,
+                hour: 18,
+                min: 0,
+                postfix: '発表'
             },
             bodyData: {
                 todayTomorrowData: [

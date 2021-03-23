@@ -18,8 +18,12 @@ describe('TodayTomorrowコンポーネント', () => {
     const todayTomorrowData = {
         titleData: {
             subject: "今日明日の天気",
-            date: "2021年2月22日",
-            time: "6時00分発表"
+            year: 2021,
+            month: 2,
+            day: 22,
+            hour: 6,
+            min: 0,
+            postfix: '発表'
         },
         todayData: {
             titleData: {

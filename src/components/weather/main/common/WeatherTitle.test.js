@@ -10,8 +10,12 @@ describe('WeatherTitleコンポーネント', () => {
     it('プロップスのテスト', () => {
         let data = {
             subject: '今日明日の天気',
-            date: '2021年2月22日',
-            time: '6時00分発表'
+            year: 2021,
+            month: 2,
+            day: 22,
+            hour: 6,
+            min: 0,
+            postfix: '発表'
         };
         let wrapper = shallow(<WeatherTitle data={data} />);
 
@@ -20,9 +24,13 @@ describe('WeatherTitleコンポーネント', () => {
         expect(weatherTitleSubjectNode.text()).toBe(data.subject);
         let weatherTitleDateNode = wrapper.find('div.weather_title div.weather_title_date');
         expect(weatherTitleDateNode.length).toBe(1);
-        expect(weatherTitleDateNode.text()).toBe(data.date);
+        expect(weatherTitleDateNode.at(0).text()).toContain(data.year);
+        expect(weatherTitleDateNode.at(0).text()).toContain(data.month);
+        expect(weatherTitleDateNode.at(0).text()).toContain(data.day);
         let weatherTitleTimeNode = wrapper.find('div.weather_title div.weather_title_time');
         expect(weatherTitleTimeNode.length).toBe(1);
-        expect(weatherTitleTimeNode.text()).toBe(data.time);
+        expect(weatherTitleTimeNode.at(0).text()).toContain(data.hour);
+        expect(weatherTitleTimeNode.at(0).text()).toContain(data.min);
+        expect(weatherTitleTimeNode.at(0).text()).toContain(data.postfix);
     });
 });
