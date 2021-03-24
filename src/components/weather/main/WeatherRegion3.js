@@ -4,7 +4,7 @@ import TodayTomorrow from "./today_tomorrow/TodayTomorrow";
 import TodayTomorrowIndex from "./today_tomorrow_index/TodayTomorrowIndex";
 import Week from "./week/Week";
 
-const WeatherRegion = function(props) {
+const WeatherRegion3 = function(props) {
 
     return (
         <div>
@@ -17,4 +17,4 @@ const WeatherRegion = function(props) {
     )
 }
 
-export default WeatherRegion;
+export default WeatherRegion3;

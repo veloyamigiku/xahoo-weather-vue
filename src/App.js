@@ -1,8 +1,9 @@
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
 import FooterWrap from './components/common/FooterWrap';
 import HeaderWrap from './components/common/HeaderWrap';
-import WeatherRegionWrap from './components/weather/main/WeatherRegionWrap';
 import SideMenuWrap from './components/weather/SideMenuWrap';
+import Contents from './Contents';
 
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
       </div>
       <div id="main">
         <div id="contents">
-          <WeatherRegionWrap />
+          <Router>
+            <Contents />
+          </Router>
         </div>
         <div id="menu">
           <SideMenuWrap type="disaster" />

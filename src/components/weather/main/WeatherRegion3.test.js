@@ -1,9 +1,15 @@
-import WeatherRegion from './WeatherRegion';
+import Enzyme, { shallow } from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
+import WeatherRegion3 from './WeatherRegion3';
+import TodayTomorrow from './today_tomorrow/TodayTomorrow';
 import sunny from './common/img/sunny.png';
 import cloudy from './common/img/cloudy.png';
 import cloudy_rain from './common/img/cloudy_rain.png';
+import Pollen from './pollen/Pollen';
 import level2 from './pollen/img/level2.png';
 import level3 from './pollen/img/level3.png';
+import Week from './week/Week';
+import TodayTomorrowIndex from './today_tomorrow_index/TodayTomorrowIndex';
 import all_cold from './today_tomorrow_index/img/all_cold.png';
 import all_drying from './today_tomorrow_index/img/all_drying.png';
 import all_overlap_wear from './today_tomorrow_index/img/all_overlap_wear.png';
@@ -22,16 +28,13 @@ import no_overlap_wear from './today_tomorrow_index/img/no_overlap_wear.png';
 import no_rain from './today_tomorrow_index/img/no_rain.png';
 import no_uv_ray from './today_tomorrow_index/img/no_uv_ray.png';
 import no_wash from './today_tomorrow_index/img/no_wash.png';
+import PinPoint from './pin_point/PinPoint';
 
-const WeatherRegionWrap = function () {
-    /*const titleData = {
-        subject: "今日明日の天気",
-        date: "2021年2月22日",
-        time: "6時00分発表"
-    }
-    const todayData = {
-        date: "2月23日(火)"
-    }*/
+Enzyme.configure({
+    adapter: new EnzymeAdapter()
+});
+
+describe('WeatherRegionコンポーネント', () => {
     const todayTomorrowData = {
         titleData: {
             subject: "今日明日の天気",
@@ -429,16 +432,30 @@ const WeatherRegionWrap = function () {
             '杉戸町',
             '松伏町'
         ]
-    };
+    }
 
-    return (
-        <WeatherRegion
-            todayTomorrowData={todayTomorrowData}
-            pollenData={pollenData}
-            weekData={weekData}
-            todayTomorrowIndexData={todayTomorrowIndexData}
-            pinPointData={pinPointData} />
-    )
-}
-
-export default WeatherRegionWrap;
+    it('プロップスのテスト', () => {
+        const wrapper = shallow(
+            <WeatherRegion3
+                todayTomorrowData={todayTomorrowData}
+                pollenData={pollenData}
+                weekData={weekData}
+                todayTomorrowIndexData={todayTomorrowIndexData}
+                pinPointData={pinPointData} />);
+        const todayTomorrowNode = wrapper.find(TodayTomorrow);
+        expect(todayTomorrowNode).toHaveLength(1);
+        expect(todayTomorrowNode.prop('data')).toEqual(todayTomorrowData);
+        const pollenNode = wrapper.find(Pollen);
+        expect(pollenNode).toHaveLength(1);
+        expect(pollenNode.at(0).prop('data')).toEqual(pollenData);
+        const weekNode = wrapper.find(Week);
+        expect(weekNode).toHaveLength(1);
+        expect(weekNode.at(0).prop('data')).toEqual(weekData);
+        const todayTomorrowIndexNode = wrapper.find(TodayTomorrowIndex);
+        expect(todayTomorrowIndexNode).toHaveLength(1);
+        expect(todayTomorrowIndexNode.at(0).prop('data')).toEqual(todayTomorrowIndexData);
+        const pinPointNode = wrapper.find(PinPoint);
+        expect(pinPointNode).toHaveLength(1);
+        expect(pinPointNode.at(0).props().data).toEqual(pinPointData);
+    });
+});
