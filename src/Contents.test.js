@@ -9,7 +9,7 @@ Enzyme.configure({
     adapter: new EnzymeAdapter()
 });
 
-describe('Appコンポーネント', () => {
+describe('Contentsコンポーネント', () => {
     it('ルーティングのテスト_' + WeatherRegionWrap3.name, () => {
         const wrapper = mount(
             <MemoryRouter initialEntries={['/WeatherRegionWrap3']}>

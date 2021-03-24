@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import FooterWrap from './components/common/FooterWrap';
 import HeaderWrap from './components/common/HeaderWrap';

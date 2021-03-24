@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router";
+import { Route, Switch } from 'react-router';
 import WeatherRegionWrap3 from './components/weather/main/WeatherRegionWrap3';
 import WeatherRegionWrap4 from './components/weather/main/WeatherRegionWrap4';
 
