@@ -1,0 +1,17 @@
+.PinPointWeatherTitle {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    padding: 2px 5px;
+    background-color: #dcdcdc;
+    color: #333;
+}
+
+.PinPointWeatherTitleSubject {
+    font-weight: 700;
+}
+
+.PinPointWeatherTitleDate {
+    margin-left: 5px;
+    font-size: 90%;
+}

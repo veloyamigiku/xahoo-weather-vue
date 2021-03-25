@@ -1,6 +1,10 @@
+import PinPointWeather from './pin_point_weather/PinPointWeather';
+
 const WeatherRegion4 = function(props) {
     return (
-        <div>WeatherRegion4</div>
+        <div>
+            <PinPointWeather data={props.pinPointWeatherData} />
+        </div>
     );
 }
 
