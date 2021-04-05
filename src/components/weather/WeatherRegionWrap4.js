@@ -1,10 +1,12 @@
 import WeatherRegion4 from './WeatherRegion4';
-import { pinPointWeatherData } from './WeatherRegionWrap4Data';
+import { weatherRegionWrap4Data } from './WeatherRegionWrap4Data';
 
 
 const WeatherRegionWrap4 = function() {
     return (
-        <WeatherRegion4 pinPointWeatherData={pinPointWeatherData} />
+        <WeatherRegion4
+            today={weatherRegionWrap4Data.today}
+            warning={weatherRegionWrap4Data.warning} />
     )
 }
 

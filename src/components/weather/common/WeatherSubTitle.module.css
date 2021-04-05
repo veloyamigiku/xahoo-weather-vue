@@ -1,4 +1,4 @@
-.PinPointWeatherTitle {
+.WeatherSubTitle {
     display: flex;
     align-items: center;
     margin-top: 5px;
@@ -7,11 +7,11 @@
     color: #333;
 }
 
-.PinPointWeatherTitleSubject {
+.WeatherSubTitleSubject {
     font-weight: 700;
 }
 
-.PinPointWeatherTitleDate {
+.WeatherSubTitleDate {
     margin-left: 5px;
     font-size: 90%;
 }

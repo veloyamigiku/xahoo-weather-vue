@@ -1,8 +1,9 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import PinPointWeather from './pin_point_weather/PinPointWeather';
+import OneDay from './one_day/OneDay';
 import WeatherRegion4 from './WeatherRegion4';
-import { pinPointWeatherData } from './WeatherRegionWrap4Data';
+import { weatherRegionWrap4Data } from './WeatherRegionWrap4Data';
+import Warning from './warning/Warning';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -10,10 +11,17 @@ Enzyme.configure({
 
 describe('WeatherRegion4コンポーネント', () => {
     it('プロップスのテスト', () => {
-        const wrapper = shallow(<WeatherRegion4 pinPointWeatherData={pinPointWeatherData} />);
+        const today = weatherRegionWrap4Data.today;
+        const warning = weatherRegionWrap4Data.warning;
+        const wrapper = shallow(<WeatherRegion4 today={today} warning={warning} />);
 
-        const pinPointWeatherNode = wrapper.find(PinPointWeather);
-        expect(pinPointWeatherNode).toHaveLength(1);
-        expect(pinPointWeatherNode.at(0).props().data).toEqual(pinPointWeatherData);
+        const oneDayNode = wrapper.find(OneDay);
+        expect(oneDayNode).toHaveLength(1);
+        const oneDayTodayNode = oneDayNode.at(0);
+        expect(oneDayTodayNode.props().data).toEqual(today);
+
+        const warningNode = wrapper.find(Warning);
+        expect(warningNode).toHaveLength(1);
+        expect(warningNode.at(0).props().data).toEqual(warning);
     });
 });

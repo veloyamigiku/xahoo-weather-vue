@@ -1,23 +1,23 @@
-.PinPointWeatherTable {
+.OneDayTable {
     margin-top: 5px;
 }
 
-.PinPointWeatherTableRow {
+.OneDayTableRow {
     display: flex;
     align-items: center;
     border-bottom: solid 1px #ccc;
 }
 
-.PinPointWeatherTableRow:first-of-type {
+.OneDayTableRow:first-of-type {
     background-color: #e9eefd;
     border-top: solid 1px #ccc;
 }
 
-.PinPointWeatherTableWeatherImg img {
+.OneDayTableWeatherImg img {
     height: 40px;
 }
 
-.PinPointWeatherTableCol {
+.OneDayTableCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,7 +30,7 @@
     border-right: solid 1px #ccc;
 }
 
-.PinPointWeatherTableCol:first-of-type {
+.OneDayTableCol:first-of-type {
     width: 18%;
     background-color: #eeeeee;
     border-left: solid 1px #ccc;
