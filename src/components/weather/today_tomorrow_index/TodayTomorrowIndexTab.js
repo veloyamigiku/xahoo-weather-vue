@@ -1,5 +1,5 @@
 import React from 'react';
-import { getDayOfWeek, getDayOfWeekStr } from '../../../../utils/main/weather/common/Date';
+import { getDayOfWeek, getDayOfWeekStr } from '../../../utils/weather/common/Date';
 import classes from './TodayTomorrowIndexTab.module.css';
 
 const TodayTomorrowIndexTab = function(props) {

@@ -1,6 +1,6 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import { fromBodyDataToTableData } from '../../../../utils/main/weather/pin_point_weather/PinPointWeatherTable';
+import { fromBodyDataToTableData } from '../../../utils/weather/pin_point_weather/PinPointWeatherTable';
 import { pinPointWeatherData } from '../WeatherRegionWrap4Data';
 import PinPointWeatherTable from './PinPointWeatherTable';
 

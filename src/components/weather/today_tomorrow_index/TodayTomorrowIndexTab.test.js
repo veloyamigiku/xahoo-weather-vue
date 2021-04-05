@@ -1,6 +1,6 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
-import { getDayOfWeekStr } from '../../../../utils/main/weather/common/Date';
+import { getDayOfWeekStr } from '../../../utils/weather/common/Date';
 import TodayTomorrowIndexTab from './TodayTomorrowIndexTab';
 import all_cold from './img/all_cold.png';
 import all_drying from './img/all_drying.png';

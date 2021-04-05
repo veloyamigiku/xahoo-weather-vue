@@ -1,7 +1,7 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import PinPointWeatherTitle from './PinPointWeatherTitle';
-import { getDayOfWeekStr } from '../../../../utils/main/weather/common/Date';
+import { getDayOfWeekStr } from '../../../utils/weather/common/Date';
 import { pinPointWeatherData } from '../WeatherRegionWrap4Data';
 
 Enzyme.configure({

@@ -1,5 +1,5 @@
 import classes from './PinPointWeatherTitle.module.css';
-import { getDayOfWeekStr } from '../../../../utils/main/weather/common/Date';
+import { getDayOfWeekStr } from '../../../utils/weather/common/Date';
 
 const PinPointWeatherTitle = function(props) {
     const dayOfWeekStr = getDayOfWeekStr(

@@ -2,7 +2,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import FooterWrap from './components/common/FooterWrap';
 import HeaderWrap from './components/common/HeaderWrap';
-import SideMenuWrap from './components/weather/SideMenuWrap';
+import SideMenuWrap from './components/weather/menu/SideMenuWrap';
 import Contents from './Contents';
 
 

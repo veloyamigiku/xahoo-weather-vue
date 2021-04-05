@@ -1,5 +1,5 @@
 import classes from './PinPointWeatherTable.module.css';
-import { fromBodyDataToTableData } from '../../../../utils/main/weather/pin_point_weather/PinPointWeatherTable';
+import { fromBodyDataToTableData } from '../../../utils/weather/pin_point_weather/PinPointWeatherTable';
 
 const PinPointWeatherTable = function(props) {
 

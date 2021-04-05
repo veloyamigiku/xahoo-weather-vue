@@ -20,7 +20,7 @@ import no_overlap_wear from './img/no_overlap_wear.png';
 import no_rain from './img/no_rain.png';
 import no_uv_ray from './img/no_uv_ray.png';
 import no_wash from './img/no_wash.png';
-import { fromIndexLevelToAllHalfNoCount } from '../../../../utils/main/weather/today_tomorrow_index/TodayTomorrowIndexBody.js';
+import { fromIndexLevelToAllHalfNoCount } from '../../../utils/weather/today_tomorrow_index/TodayTomorrowIndexBody.js';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()

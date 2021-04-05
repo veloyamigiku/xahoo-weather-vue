@@ -1,8 +1,8 @@
 import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { MemoryRouter } from 'react-router';
-import WeatherRegionWrap3 from './components/weather/main/WeatherRegionWrap3';
-import WeatherRegionWrap4 from './components/weather/main/WeatherRegionWrap4';
+import WeatherRegionWrap3 from './components/weather/WeatherRegionWrap3';
+import WeatherRegionWrap4 from './components/weather/WeatherRegionWrap4';
 import Contents from './Contents';
 
 Enzyme.configure({

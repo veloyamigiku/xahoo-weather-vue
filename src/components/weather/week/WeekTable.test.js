@@ -4,7 +4,7 @@ import WeekTable from './WeekTable';
 import sunny from '../common/img/sunny.png';
 import cloudy from '../common/img/cloudy.png';
 import cloudy_rain from '../common/img/cloudy_rain.png';
-import { formatWeekBody, getDayOfWeekStr } from '../../../../utils/main/weather/week/WeekTable';
+import { formatWeekBody, getDayOfWeekStr } from '../../../utils/weather/week/WeekTable';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()

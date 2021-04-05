@@ -1,5 +1,5 @@
 import classes from './TodayTomorrowIndexBody.module.css';
-import { fromIndexLevelToAllHalfNoCount } from "../../../../utils/main/weather/today_tomorrow_index/TodayTomorrowIndexBody";
+import { fromIndexLevelToAllHalfNoCount } from "../../../utils/weather/today_tomorrow_index/TodayTomorrowIndexBody";
 
 const TodayTomorrowIndexBody = function(props) {
 

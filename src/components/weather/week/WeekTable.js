@@ -1,4 +1,4 @@
-import { formatWeekBody, getDayOfWeek, getDayOfWeekStr } from '../../../../utils/main/weather/week/WeekTable';
+import { formatWeekBody, getDayOfWeek, getDayOfWeekStr } from '../../../utils/weather/week/WeekTable';
 import classes from './WeekTable.module.css';
 
 const WeekTable = function(props) {
