@@ -8,7 +8,7 @@ import WeatherT from './WeatherT';
 import WeatherTitle from '../common/WeatherTitle';
 import RainTable from './RainTable';
 import Option from './Option';
-import Warning from './Warning';
+import Warning from '../warning/Warning';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()

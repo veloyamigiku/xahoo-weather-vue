@@ -2,7 +2,7 @@ import WeatherTitle from '../common/WeatherTitle';
 import Option from './Option';
 import RainTable from './RainTable';
 import TodayTomorrowTitle from './TodayTomorrowTitle';
-import Warning from './Warning';
+import Warning from '../warning/Warning';
 import WeatherT from './WeatherT';
 import classes from './TodayTomorrow.module.css';
 
