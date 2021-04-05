@@ -10,22 +10,22 @@ const TodayTomorrow = function(props) {
 
     return (
         <div>
-            <WeatherTitle data={props.data.titleData} />
+            <WeatherTitle data={props.data.title} />
             <div className={classes.TodayTomorrow}>
                 <div className={classes.Today}>
-                    <TodayTomorrowTitle data={props.data.todayData.titleData} />
-                    <WeatherT data={props.data.todayData.weatherTData} />
-                    <RainTable data={props.data.todayData.rainData} />
-                    <Option data={props.data.todayData.optionData} />
+                    <TodayTomorrowTitle data={props.data.today.title} />
+                    <WeatherT data={props.data.today.weatherT} />
+                    <RainTable data={props.data.today.rain} />
+                    <Option data={props.data.today.option} />
                 </div>
                 <div className={classes.Tomorrow}>
-                    <TodayTomorrowTitle data={props.data.tomorrowData.titleData} />
-                    <WeatherT data={props.data.tomorrowData.weatherTData} />
-                    <RainTable data={props.data.tomorrowData.rainData} />
-                    <Option data={props.data.tomorrowData.optionData} />
+                    <TodayTomorrowTitle data={props.data.tomorrow.title} />
+                    <WeatherT data={props.data.tomorrow.weatherT} />
+                    <RainTable data={props.data.tomorrow.rain} />
+                    <Option data={props.data.tomorrow.option} />
                 </div>
             </div>
-            <Warning data={props.data.warningData} />
+            <Warning data={props.data.warning} />
         </div>
     )
 }

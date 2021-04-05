@@ -6,8 +6,8 @@ const Pollen = function(props) {
 
     return (
         <div className={classes.Pollen}>
-            <WeatherTitle data={props.data.titleData} />
-            <PollenBody data={props.data.bodyData} />
+            <WeatherTitle data={props.data.title} />
+            <PollenBody data={props.data.body} />
         </div>
     );
 }

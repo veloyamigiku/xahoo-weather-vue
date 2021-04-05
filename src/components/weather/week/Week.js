@@ -6,8 +6,8 @@ const Week = function(props) {
 
     return (
         <div className={classes.Week}>
-            <WeatherTitle data={props.data.titleData} />
-            <WeekTable data={props.data.bodyData} />
+            <WeatherTitle data={props.data.title} />
+            <WeekTable data={props.data.body} />
         </div>
     );
 }

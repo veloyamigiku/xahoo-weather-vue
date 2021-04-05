@@ -1,4 +1,4 @@
-import PinPoint from "./pin_point/PinPoint";
+import CityList from "./city_list/CityList";
 import Pollen from "./pollen/Pollen";
 import TodayTomorrow from "./today_tomorrow/TodayTomorrow";
 import TodayTomorrowIndex from "./today_tomorrow_index/TodayTomorrowIndex";
@@ -8,11 +8,11 @@ const WeatherRegion3 = function(props) {
 
     return (
         <div>
-            <TodayTomorrow data={props.todayTomorrowData} />
-            <Pollen data={props.pollenData} />
-            <Week data={props.weekData} />
-            <TodayTomorrowIndex data={props.todayTomorrowIndexData} />
-            <PinPoint data={props.pinPointData} />
+            <TodayTomorrow data={props.todayTomorrow} />
+            <Pollen data={props.pollen} />
+            <Week data={props.week} />
+            <TodayTomorrowIndex data={props.todayTomorrowIndex} />
+            <CityList data={props.cityList} />
         </div>
     )
 }

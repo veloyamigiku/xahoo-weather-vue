@@ -1,21 +1,14 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import WeatherT from './WeatherT';
-import sunny from '../common/img/sunny.png';
+import { weatherRegionWrap3Data } from '../WeatherRegionWrap3Data';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
 });
 
 describe('WeatherTコンポーネント', () => {
-    const data = {
-        type: sunny,
-        str: "晴れ",
-        highT: "14",
-        highTDiff: "-8",
-        lowT: "4",
-        lowTDiff: "-1"
-    }
+    const data = weatherRegionWrap3Data.todayTomorrow.today.weatherT;
     it('プロップスのテスト', () => {
         const wrapper = shallow(<WeatherT data={data} />);
         

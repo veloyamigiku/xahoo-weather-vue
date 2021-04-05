@@ -2,6 +2,7 @@ import Enzymy from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
 import Option from './Option';
+import { weatherRegionWrap3Data } from '../WeatherRegionWrap3Data';
 
 Enzymy.configure({
     adapter: new EnzymeAdapter()
@@ -9,16 +10,7 @@ Enzymy.configure({
 
 describe('Optionコンポーネント', () => {
     it('プロップスのテスト', () => {
-        const optionData = [
-            {
-                name: '風',
-                value: '北の風強く後北東の風'
-            },
-            {
-                name: '波',
-                value: '4メートル後3メートルうねりを伴う'
-            }
-        ];
+        const optionData = weatherRegionWrap3Data.todayTomorrow.today.option;
         const wrapper = shallow(<Option data={optionData} />);
 
         const optionItemNameNode = wrapper.find('div.Option div.OptionItem div.OptionItemName');

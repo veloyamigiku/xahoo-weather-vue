@@ -3,7 +3,7 @@ import classes from './PollenBody.module.css';
 const PollenBody = function(props) {
 
     var bodyOneDayList = [];
-    props.data.todayTomorrowData.forEach((oneDayData, idx) => {
+    props.data.todayTomorrow.forEach((oneDayData, idx) => {
         bodyOneDayList.push(
             <div className={classes.BodyOneDay} key={idx}>
                 <div className={classes.BodyDate}>{oneDayData.date}</div>
@@ -17,7 +17,7 @@ const PollenBody = function(props) {
             <div className={classes.BodyTodayTomorrow}>
                 {bodyOneDayList}
             </div>
-            <div className={classes.DescButton}><a href={props.data.descData.url}>{props.data.descData.title}</a></div>
+            <div className={classes.DescButton}><a href={props.data.desc.url}>{props.data.desc.title}</a></div>
         </div>
     );
 }

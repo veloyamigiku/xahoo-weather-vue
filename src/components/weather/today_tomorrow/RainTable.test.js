@@ -1,6 +1,7 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import RainTable from './RainTable';
+import { weatherRegionWrap3Data } from '../WeatherRegionWrap3Data';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -8,28 +9,7 @@ Enzyme.configure({
 
 describe('RainTableコンポーネント', () => {
     
-    const rainData = [
-        {
-            startHour: 0,
-            endHour: 6,
-            rain: 10
-        },
-        {
-            startHour: 6,
-            endHour: 12,
-            rain: 12
-        },
-        {
-            startHour: 12,
-            endHour: 18,
-            rain: 14
-        },
-        {
-            startHour: 18,
-            endHour: 24,
-            rain: 30
-        }
-    ]
+    const rainData = weatherRegionWrap3Data.todayTomorrow.today.rain;
 
     it('プロップスのテスト', () => {
 

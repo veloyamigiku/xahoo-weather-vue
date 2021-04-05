@@ -13,9 +13,9 @@ const TodayTomorrowIndex = function(props) {
     
     return (
         <div className="TodayTomorrowIndex">
-            <WeatherTitle data={props.data.titleData} />
-            <TodayTomorrowIndexTab data={props.data.bodyData} activeIdx={activeIdx} onClickTab={onClickTab} />
-            <TodayTomorrowIndexBody data={props.data.bodyData} activeIdx={activeIdx} />
+            <WeatherTitle data={props.data.title} />
+            <TodayTomorrowIndexTab data={props.data.body} activeIdx={activeIdx} onClickTab={onClickTab} />
+            <TodayTomorrowIndexBody data={props.data.body} activeIdx={activeIdx} />
         </div>
     )
 }

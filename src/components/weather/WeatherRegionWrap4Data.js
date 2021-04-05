@@ -1,6 +1,8 @@
 import night_sunny_cloudy from './one_day/img/night_sunny_cloudy.png';
 import cloudy from './one_day/img/cloudy.png';
 import sunny_cloudy from './one_day/img/sunny_cloudy.png';
+import level2 from './pollen/img/level2.png';
+import level3 from './pollen/img/level3.png';
 
 export const weatherRegionWrap4Data = {
     today: {
@@ -113,5 +115,34 @@ export const weatherRegionWrap4Data = {
                 ]
             }
         ]
+    },
+    pollen: {
+        title: {
+            subject: 'ふじみ野市の花粉情報',
+            year: 2021,
+            month: 3,
+            day: 4,
+            hour: 18,
+            min: 0,
+            postfix: '発表'
+        },
+        body: {
+            todayTomorrow: [
+                {
+                    date: '3/5(金)',
+                    quantityImg: level2,
+                    quantity: 'やや多い'
+                },
+                {
+                    date: '3/6(土)',
+                    quantityImg: level3,
+                    quantity: '多い'
+                }
+            ],
+            desc: {
+                title: '花粉の詳しい情報を確認',
+                url: 'http://localhost:8080'
+            }
+        }
     }
 };

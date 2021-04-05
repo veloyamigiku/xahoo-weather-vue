@@ -1,4 +1,4 @@
-.PinPointBody {
+.CityListBody {
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
@@ -6,20 +6,20 @@
     padding-right: 6px;
 }
 
-.PinPointBodyItem {
+.CityListBodyItem {
     display: flex;
     width: 20%;
 }
 
-.PinPointBodyItem:nth-of-type(n + 6) {
+.CityListBodyItem:nth-of-type(n + 6) {
     margin-top: 5px;
 }
 
-.PinPointBodyItem a {
+.CityListBodyItem a {
     text-decoration: none;
     font-size: .9375rem;
 }
 
-.PinPointBodyItem a:hover {
+.CityListBodyItem a:hover {
     color: #c1132e;
 }

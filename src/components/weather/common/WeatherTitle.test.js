@@ -1,6 +1,7 @@
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import WeatherTitle from './WeatherTitle';
+import { weatherRegionWrap3Data } from '../WeatherRegionWrap3Data';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -8,15 +9,7 @@ Enzyme.configure({
 
 describe('WeatherTitleコンポーネント', () => {
     it('プロップスのテスト', () => {
-        let data = {
-            subject: '今日明日の天気',
-            year: 2021,
-            month: 2,
-            day: 22,
-            hour: 6,
-            min: 0,
-            postfix: '発表'
-        };
+        let data = weatherRegionWrap3Data.todayTomorrow.title;
         let wrapper = shallow(<WeatherTitle data={data} />);
 
         let weatherTitleSubjectNode = wrapper.find('div.weather_title div.weather_title_subject');
