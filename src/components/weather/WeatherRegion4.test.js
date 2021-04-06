@@ -5,6 +5,7 @@ import WeatherRegion4 from './WeatherRegion4';
 import { weatherRegionWrap4Data } from './WeatherRegionWrap4Data';
 import Warning from './warning/Warning';
 import Pollen from './pollen/Pollen';
+import Week from './week/Week';
 
 Enzyme.configure({
     adapter: new EnzymeAdapter()
@@ -16,12 +17,14 @@ describe('WeatherRegion4コンポーネント', () => {
         const warning = weatherRegionWrap4Data.warning;
         const pollen = weatherRegionWrap4Data.pollen;
         const tomorrow = weatherRegionWrap4Data.tomorrow;
+        const week = weatherRegionWrap4Data.week;
         const wrapper = shallow(
             <WeatherRegion4
                 today={today}
                 warning={warning}
                 pollen={pollen}
-                tomorrow={tomorrow} />);
+                tomorrow={tomorrow}
+                week={week} />);
 
         const oneDayNode = wrapper.find(OneDay);
         expect(oneDayNode).toHaveLength(2);
@@ -38,5 +41,9 @@ describe('WeatherRegion4コンポーネント', () => {
 
         const oneDayTomorrowNode = oneDayNode.at(1);
         expect(oneDayTomorrowNode.props().data).toEqual(tomorrow);
+
+        const weekNode = wrapper.find(Week);
+        expect(weekNode).toHaveLength(1);
+        expect(weekNode.at(0).props().data).toEqual(week);
     });
 });

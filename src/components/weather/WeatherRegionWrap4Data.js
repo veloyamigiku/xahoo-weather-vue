@@ -1,6 +1,9 @@
-import night_sunny_cloudy from './one_day/img/night_sunny_cloudy.png';
-import cloudy from './one_day/img/cloudy.png';
-import sunny_cloudy from './one_day/img/sunny_cloudy.png';
+import common_sunny from './common/img/sunny.png';
+import common_cloudy from './common/img/cloudy.png';
+import common_cloudy_rain from './common/img/cloudy_rain.png';
+import one_day_night_sunny_cloudy from './one_day/img/night_sunny_cloudy.png';
+import one_day_cloudy from './one_day/img/cloudy.png';
+import one_day_sunny_cloudy from './one_day/img/sunny_cloudy.png';
 import level2 from './pollen/img/level2.png';
 import level3 from './pollen/img/level3.png';
 
@@ -24,7 +27,7 @@ export const weatherRegionWrap4Data = {
         body: [
             {
                 hour: 0,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 23,
                 rh: 81,
@@ -34,7 +37,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 3,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 22,
                 rh: 81,
@@ -44,7 +47,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 6,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 22,
                 rh: 82,
@@ -54,7 +57,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 9,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 24,
                 rh: 77,
@@ -64,7 +67,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 12,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 26,
                 rh: 70,
@@ -74,7 +77,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 15,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 26,
                 rh: 70,
@@ -84,7 +87,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 18,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 25,
                 rh: 73,
@@ -94,7 +97,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 21,
-                weatherImg: cloudy,
+                weatherImg: one_day_cloudy,
                 weather: '曇り',
                 t: 23,
                 rh: 83,
@@ -115,7 +118,7 @@ export const weatherRegionWrap4Data = {
         body: [
             {
                 hour: 0,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 23,
                 rh: 81,
@@ -125,7 +128,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 3,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 22,
                 rh: 81,
@@ -135,7 +138,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 6,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 22,
                 rh: 82,
@@ -145,7 +148,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 9,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 24,
                 rh: 77,
@@ -155,7 +158,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 12,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 26,
                 rh: 70,
@@ -165,7 +168,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 15,
-                weatherImg: sunny_cloudy,
+                weatherImg: one_day_sunny_cloudy,
                 weather: '晴れ',
                 t: 26,
                 rh: 70,
@@ -175,7 +178,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 18,
-                weatherImg: night_sunny_cloudy,
+                weatherImg: one_day_night_sunny_cloudy,
                 weather: '晴れ',
                 t: 25,
                 rh: 73,
@@ -185,7 +188,7 @@ export const weatherRegionWrap4Data = {
             },
             {
                 hour: 21,
-                weatherImg: cloudy,
+                weatherImg: one_day_cloudy,
                 weather: '曇り',
                 t: 23,
                 rh: 83,
@@ -235,5 +238,78 @@ export const weatherRegionWrap4Data = {
                 url: 'http://localhost:8080'
             }
         }
+    },
+    week: {
+        title: {
+            subject: '週間天気',
+            year: 2021,
+            month: 3,
+            day: 5,
+            hour: 4,
+            min: 0,
+            postfix: '発表'
+        },
+        body: [
+            {
+                year: 2021,
+                month: 3,
+                day: 7,
+                weatherImg: common_cloudy,
+                weather: '曇り',
+                highT: '11',
+                lowT: '6',
+                rain: '20'
+            },
+            {
+                year: 2021,
+                month: 3,
+                day: 8,
+                weatherImg: common_cloudy,
+                weather: '曇り',
+                highT: '10',
+                lowT: '3',
+                rain: '40'
+            },
+            {
+                year: 2021,
+                month: 3,
+                day: 9,
+                weatherImg: common_sunny,
+                weather: '晴れ',
+                highT: '12',
+                lowT: '5',
+                rain: '15'
+            },
+            {
+                year: 2021,
+                month: 3,
+                day: 10,
+                weatherImg: common_cloudy,
+                weather: '曇り',
+                highT: '14',
+                lowT: '4',
+                rain: '40'
+            },
+            {
+                year: 2021,
+                month: 3,
+                day: 11,
+                weatherImg: common_sunny,
+                weather: '晴れ',
+                highT: '17',
+                lowT: '3',
+                rain: '10'
+            },
+            {
+                year: 2021,
+                month: 3,
+                day: 12,
+                weatherImg: common_cloudy_rain,
+                weather: '曇一時雨',
+                highT: '15',
+                lowT: '6',
+                rain: '60'
+            }
+        ]
     }
 };
