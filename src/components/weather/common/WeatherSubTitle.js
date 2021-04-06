@@ -8,7 +8,7 @@ const WeatherSubTitle = function(props) {
         props.data.day);
     return (
         <div className={classes.WeatherSubTitle}>
-            <div className={classes.WeatherSubTitleSubject}>今日の天気</div>
+            <div className={classes.WeatherSubTitleSubject}>{props.data.subject}</div>
             <div className={classes.WeatherSubTitleDate}> - {props.data.month}月{props.data.day}日({dayOfWeekStr})</div>
         </div>
     );

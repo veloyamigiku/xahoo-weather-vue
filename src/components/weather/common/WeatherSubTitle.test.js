@@ -10,19 +10,20 @@ Enzyme.configure({
 
 describe('WeatherSubTitleコンポーネント', () => {
     it('プロップスのテスト', () => {
-        const data = weatherRegionWrap4Data.today.title
+        const data = weatherRegionWrap4Data.tomorrow.subTitle;
         const wrapper = shallow(
             <WeatherSubTitle data={data} />
         );
 
-        const pinPointWeatherTitleNode = wrapper.find('div.WeatherSubTitle');
-        expect(pinPointWeatherTitleNode).toHaveLength(1);
-        expect(pinPointWeatherTitleNode.at(0).text()).toContain(data.month);
-        expect(pinPointWeatherTitleNode.at(0).text()).toContain(data.day);
+        const weatherSubTitleNode = wrapper.find('div.WeatherSubTitle');
+        expect(weatherSubTitleNode).toHaveLength(1);
+        expect(weatherSubTitleNode.at(0).text()).toContain(data.subject);
+        expect(weatherSubTitleNode.at(0).text()).toContain(data.month);
+        expect(weatherSubTitleNode.at(0).text()).toContain(data.day);
         const dayOfWeekStr = getDayOfWeekStr(
             data.year,
             data.month,
             data.day);
-        expect(pinPointWeatherTitleNode.at(0).text()).toContain(dayOfWeekStr);
+        expect(weatherSubTitleNode.at(0).text()).toContain(dayOfWeekStr);
     });
 });
