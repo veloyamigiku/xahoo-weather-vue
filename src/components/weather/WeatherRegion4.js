@@ -8,6 +8,7 @@ const WeatherRegion4 = function(props) {
             <OneDay data={props.today} />
             <Warning data={props.warning} />
             <Pollen data={props.pollen} />
+            <OneDay data={props.tomorrow} />
         </div>
     );
 }

@@ -7,7 +7,8 @@ const WeatherRegionWrap4 = function() {
         <WeatherRegion4
             today={weatherRegionWrap4Data.today}
             warning={weatherRegionWrap4Data.warning}
-            pollen={weatherRegionWrap4Data.pollen} />
+            pollen={weatherRegionWrap4Data.pollen}
+            tomorrow={weatherRegionWrap4Data.tomorrow} />
     )
 }
 

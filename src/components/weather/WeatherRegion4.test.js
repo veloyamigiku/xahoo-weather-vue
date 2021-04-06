@@ -15,14 +15,16 @@ describe('WeatherRegion4コンポーネント', () => {
         const today = weatherRegionWrap4Data.today;
         const warning = weatherRegionWrap4Data.warning;
         const pollen = weatherRegionWrap4Data.pollen;
+        const tomorrow = weatherRegionWrap4Data.tomorrow;
         const wrapper = shallow(
             <WeatherRegion4
                 today={today}
                 warning={warning}
-                pollen={pollen} />);
+                pollen={pollen}
+                tomorrow={tomorrow} />);
 
         const oneDayNode = wrapper.find(OneDay);
-        expect(oneDayNode).toHaveLength(1);
+        expect(oneDayNode).toHaveLength(2);
         const oneDayTodayNode = oneDayNode.at(0);
         expect(oneDayTodayNode.props().data).toEqual(today);
 
@@ -33,5 +35,8 @@ describe('WeatherRegion4コンポーネント', () => {
         const pollenNode = wrapper.find(Pollen);
         expect(pollenNode).toHaveLength(1);
         expect(pollenNode.at(0).props().data).toEqual(pollen);
+
+        const oneDayTomorrowNode = oneDayNode.at(1);
+        expect(oneDayTomorrowNode.props().data).toEqual(tomorrow);
     });
 });

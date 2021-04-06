@@ -11,13 +11,9 @@ Enzyme.configure({
 });
 
 describe('OneDayコンポーネント', () => {
-    it('プロップスのテスト', () => {
+    it('プロップスのテスト_共通', () => {
         const data = weatherRegionWrap4Data.today;
         const wrapper = shallow(<OneDay data={data} />);
-
-        const weatherTitleNode = wrapper.find(WeatherTitle);
-        expect(weatherTitleNode).toHaveLength(1);
-        expect(weatherTitleNode.at(0).props().data).toEqual(data.title);
 
         const weatherSubTitleNode = wrapper.find(WeatherSubTitle);
         expect(weatherSubTitleNode).toHaveLength(1);
@@ -26,5 +22,20 @@ describe('OneDayコンポーネント', () => {
         const oneDayTableNode = wrapper.find(OneDayTable);
         expect(oneDayTableNode).toHaveLength(1);
         expect(oneDayTableNode.at(0).props().data).toEqual(data.body);
+    });
+    it('プロップスのテスト_タイトルあり', () => {
+        const data = weatherRegionWrap4Data.today;
+        const wrapper = shallow(<OneDay data={data} />);
+
+        const weatherTitleNode = wrapper.find(WeatherTitle);
+        expect(weatherTitleNode).toHaveLength(1);
+        expect(weatherTitleNode.at(0).props().data).toEqual(data.title);
+    });
+    it('プロップスのテスト_タイトルあり', () => {
+        const data = weatherRegionWrap4Data.tomorrow;
+        const wrapper = shallow(<OneDay data={data} />);
+
+        const weatherTitleNode = wrapper.find(WeatherTitle);
+        expect(weatherTitleNode).toHaveLength(0);
     });
 });
