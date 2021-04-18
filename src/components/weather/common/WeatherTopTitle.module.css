@@ -1,0 +1,21 @@
+.WeatherTopTitle {
+    display: flex;
+    align-items: baseline;
+}
+
+.WeatherTopTitleSubject {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.WeatherTopTitleDateTime {
+    display: flex;
+    align-items: flex-end;
+    font-size: .8rem;
+    color: #696969;
+    margin-left: 5px;
+}
+
+.WeatherTopTitleTime {
+    margin-left: 5px;
+}

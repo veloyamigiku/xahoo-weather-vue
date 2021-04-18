@@ -1,0 +1,57 @@
+.WeatherMapImg {
+    margin: 0 auto;
+    position: relative;
+}
+
+.WeatherMapPosition {
+    background-color: rgba(246, 246, 246, .7);
+    text-align: center;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgb(50 50 50 / 25%);
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0;
+}
+
+.WeatherMapPositionName {
+    display: inline-block;
+    color: #333;
+    font-size: .8125rem;
+}
+
+.WeatherMapPositionImg {
+    display: inline-block;
+    line-height: 1;
+}
+
+.WeatherMapPositionImg img {
+    width: 45px;
+    vertical-align: middle;
+}
+
+.WeatherMapPositionT {
+    display: inline-block;
+    font-size: .75rem;
+    line-height: 1;
+  }
+  
+  .WeatherMapPositionHighT {
+    color: #fd3102;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .WeatherMapPositionLowT {
+    color: #0a38e4;
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  .WeatherMapPositionPercip {
+    display: inline-block;
+    font-size: .75rem;
+    line-height: 1;
+    margin-bottom: 3px;
+  }
+  
