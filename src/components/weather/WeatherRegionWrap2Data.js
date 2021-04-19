@@ -1,6 +1,6 @@
-import region2 from './weather_map/img/region2.png'
-import cloudy_level1 from './weather_map/img/cloudy_level1.png'
-import cloudy_level2 from './weather_map/img/cloudy_level2.png'
+import region2 from './weather_map/img/region2.png';
+import cloudy_level1 from './weather_map/img/cloudy_level1.png';
+import cloudy_level2 from './weather_map/img/cloudy_level2.png';
 
 export const weatherRegionWrap2Data = {
     weatherMap: {
@@ -353,5 +353,22 @@ export const weatherRegionWrap2Data = {
                 ]
             }
         ]
+    },
+    generalCondition: {
+        title: {
+            subject: '都道府県概況'
+        },
+        body: {
+            content: '■埼玉県では、14日夜のはじめ頃まで急な強い雨や落雷に注意してください。' +
+                '<br>' +
+                '<br>' +
+                '紀伊半島の東には前線を伴った低気圧があって東に進んでいます。また、サハリン付近の低気圧からのびる寒冷前線が、北日本から東日本を通過しています。' +
+                '<br>' +
+                '埼玉県は、曇りとなっています。' +
+                '<br>' +
+                '14日は、午前中は前線や低気圧の影響を受け、午後は上空の寒気や気圧の谷の影響を受ける見込みです。このため、曇りで時々雨となり、夜のはじめ頃まで雷を伴う所があるでしょう。' +
+                '<br>' +
+                '15日は、高気圧に覆われて晴れますが、朝晩は湿った空気の影響で曇りとなる見込みです。'
+        }
     }
 }
