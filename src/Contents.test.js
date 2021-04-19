@@ -1,6 +1,7 @@
 import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import { MemoryRouter } from 'react-router';
+import WeatherRegionWrap1 from './components/weather/WeatherRegionWrap1';
 import WeatherRegionWrap2 from './components/weather/WeatherRegionWrap2';
 import WeatherRegionWrap3 from './components/weather/WeatherRegionWrap3';
 import WeatherRegionWrap4 from './components/weather/WeatherRegionWrap4';
@@ -11,6 +12,15 @@ Enzyme.configure({
 });
 
 describe('Contentsコンポーネント', () => {
+    it('ルーティングのテスト_' + WeatherRegionWrap1.name, () => {
+        const wrapper = mount(
+            <MemoryRouter initialEntries={['/WeatherRegionWrap1']}>
+                <Contents />
+            </MemoryRouter>
+        );
+        const weatherRegionWrap1 = wrapper.find(WeatherRegionWrap1);
+        expect(weatherRegionWrap1).toHaveLength(1);
+    });
     it('ルーティングのテスト_' + WeatherRegionWrap2.name, () => {
         const wrapper = mount(
             <MemoryRouter initialEntries={['/WeatherRegionWrap2']}>
